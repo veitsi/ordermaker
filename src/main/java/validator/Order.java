@@ -1,6 +1,7 @@
-package hello;
+package validator;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Order {
@@ -12,8 +13,12 @@ public class Order {
     private String destination;
     
     @NotNull
+    @Pattern(regexp="\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b")
     private String email;
     
+    @NotNull
+    @Pattern(regexp="\\d{3}-\\d{7}")
+    private String phone;
 
 	public Long getId() {
 		return id;

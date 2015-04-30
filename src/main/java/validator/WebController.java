@@ -1,4 +1,4 @@
-package hello;
+package validator;
 
 import javax.validation.Valid;
 
@@ -27,12 +27,12 @@ public class WebController extends WebMvcConfigurerAdapter {
     }
 
     @RequestMapping(value="/", method=RequestMethod.POST)
-    public String checkPersonInfo(@Valid @ModelAttribute Person person, BindingResult bindingResult,
+    public String checkPersonInfo(@Valid @ModelAttribute Order order, BindingResult bindingResult,
     		Model model ) {
         if (bindingResult.hasErrors()) {
             return "form";
         }
-        model.addAttribute("person", person);
+        model.addAttribute("order", order);
         return "redirect:/results";
     }
 

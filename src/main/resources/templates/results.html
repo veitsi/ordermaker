@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 	<body>
-		Congratulations! You are old enough to sign up for this site.
+		Congratulations! Your order is accepted. Taxi is on the way.
+		<p th:text="'your name is: ' + ${person.name}" />
 	</body>
 </html>

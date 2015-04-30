@@ -28,7 +28,7 @@ public class WebController extends WebMvcConfigurerAdapter {
 
     @RequestMapping(value="/", method=RequestMethod.POST)
     public String checkPersonInfo(@Valid Person person, BindingResult bindingResult,
-    		@ModelAttribute Order order, Model model ) {
+    		Model model ) {
         if (bindingResult.hasErrors()) {
             return "form";
         }

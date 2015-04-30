@@ -32,7 +32,7 @@ public class WebController extends WebMvcConfigurerAdapter {
         if (bindingResult.hasErrors()) {
             return "form";
         }
-        model.addAttribute("order", order);
+        //model.addAttribute("order", order);
         return "redirect:/results";
     }
 

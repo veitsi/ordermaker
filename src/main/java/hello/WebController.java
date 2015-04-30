@@ -22,7 +22,7 @@ public class WebController extends WebMvcConfigurerAdapter {
     }
 
     @RequestMapping(value="/", method=RequestMethod.GET)
-    public String showForm(Person person) {
+    public String showForm(Order order) {
         return "form";
     }
 

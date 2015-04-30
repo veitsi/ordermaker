@@ -29,12 +29,6 @@ public class Person {
         this.age = age;
     }
 
-    public Person() {
-	}
-    public Person(String name, Integer age) {
-		this.name = name;
-		this.age = age;
-	}
 
 	public String toString() {
         return "Person(Name: " + this.name + ", Age: " + this.age + ")";

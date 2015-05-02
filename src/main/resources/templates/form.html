@@ -1,16 +1,17 @@
 <html>
 <body>
+<p> Сттраница для заказа такси</p>
 	<form action="#" th:action="@{/}" th:object="${order}" method="post">
 
 		<table>
 			<tr>
-				<td>id:</td>
+				<td>укажите номер заказа:</td>
 				<td><input type="text" th:field="*{id}" /></td>
 				<td th:if="${#fields.hasErrors('id')}" th:errors="*{id}">id
 					Error</td>
 			</tr>
 			<tr>
-				<td>Destination:</td>
+				<td>Куда ехать:</td>
 				<td><input type="text" th:field="*{destination}" /></td>
 				<td th:if="${#fields.hasErrors('destination')}"
 					th:errors="*{destination}">Destination Error</td>
@@ -22,7 +23,7 @@
 					th:errors="*{email}">e-mail Error</td>
 			</tr>
 			<tr>
-				<td><button type="submit">Submit</button></td>
+				<td><button type="submit">Заберите меня отсюда</button></td>
 			</tr>
 		</table>
 	</form>

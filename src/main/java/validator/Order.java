@@ -7,6 +7,9 @@ import javax.validation.constraints.Size;
 public class Order {
 	@NotNull
     private Long id;
+	
+	@NotNull
+	private String source;
 
     @NotNull
     private String destination;
